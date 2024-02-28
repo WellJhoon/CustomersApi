@@ -1,10 +1,6 @@
 ﻿using CleanCustomers.Aplication.Interfaces;
 using CleanCustomers.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CleanCustomers.Aplication.Service
 {
@@ -17,7 +13,7 @@ namespace CleanCustomers.Aplication.Service
             _customersRepository = customersRepository;
         }
 
-        public Customers CreateCustomer (Customers customers) 
+        public Customers CreateCustomers (Customers customers) 
         {
             return _customersRepository.CreateCustomers(customers);
         }
@@ -27,7 +23,7 @@ namespace CleanCustomers.Aplication.Service
             return _customersRepository.GetAllCustomers();
         }
 
-        public Customers GetCustomersById (int id) 
+        public Customers GetCustomersById(int id) 
         {
             return _customersRepository.GetCustomersById(id);
         }
@@ -37,7 +33,7 @@ namespace CleanCustomers.Aplication.Service
              _customersRepository.UpdateCustomer(customers);
         }
 
-        public void DeleteCustomersById (int id)
+        public void DeleteCustomers(int id)
         {
             _customersRepository.DeleteCustomer(id);
         }
